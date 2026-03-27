@@ -4,6 +4,7 @@ import Dashboard from "./pages/Dashboard";
 import DiseaseDetection from "./pages/DiseaseDetection";
 import CropInsights from "./pages/CropInsights";
 import SmartMarketplace from "./pages/SmartMarketplace";
+import SoilForm from "./pages/SoilForm";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="disease-detection" element={<DiseaseDetection />} />
           <Route path="crop-insights" element={<CropInsights />} />
           <Route path="smart-marketplace" element={<SmartMarketplace />} />
+          <Route path="soil-form" element={<SoilForm />} />
         </Route>
       </Routes>
     </Router>

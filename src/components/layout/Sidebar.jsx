@@ -9,6 +9,7 @@ const Sidebar = () => {
       <Link to="/disease-detection">Disease Detection</Link>
       <Link to="/crop-insights">Crop Insights</Link>
       <Link to="/smart-marketplace">Smart Marketplace</Link>
+      <Link to="/soil-form">Soil Form</Link>
     </div>
   );
 };
