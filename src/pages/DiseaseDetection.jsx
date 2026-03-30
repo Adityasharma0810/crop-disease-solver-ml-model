@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { BACKEND2_BASE_URL } from "../services/api";
 
@@ -8,8 +7,9 @@ const DiseaseDetection = () => {
   const [loading, setLoading] = useState(false);
 
   const handleUpload = (e) => {
-    setFile(e.target.files[0]);
-    setResult(null); 
+    const selectedFile = e.target.files[0];
+    setFile(selectedFile);
+    setResult(null);
   };
 
   const handlePredict = async () => {
@@ -24,12 +24,27 @@ const DiseaseDetection = () => {
     try {
       setLoading(true);
 
+      console.log("Sending request to:", `${BACKEND2_BASE_URL}/predict`);
+
       const res = await fetch(`${BACKEND2_BASE_URL}/predict`, {
         method: "POST",
         body: formData,
       });
 
+      console.log("Response status:", res.status);
+
+      if (!res.ok) {
+        throw new Error("Server error: " + res.status);
+      }
+
       const data = await res.json();
+      console.log("Response data:", data);
+
+      if (data.error) {
+        alert(data.error);
+        return;
+      }
+
       setResult(data);
     } catch (error) {
       console.error(error);
@@ -67,13 +82,16 @@ const DiseaseDetection = () => {
         {loading ? "Detecting..." : "🔍 Detect Disease"}
       </button>
 
+      {/* Loading */}
+      {loading && <p>⏳ Processing...</p>}
+
       {/* Result */}
-      {result && (
+      {result && !result.error && (
         <div style={{ marginTop: "30px" }}>
           <h2>Result</h2>
-          <p><strong>Crop:</strong> {result.crop}</p>
+          
           <p><strong>Disease:</strong> {result.disease}</p>
-          <p><strong>Confidence:</strong> {result.confidence}%</p>
+
         </div>
       )}
     </div>
