@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { BACKEND2_BASE_URL } from "../services/api";
+import diseases from "../../databasejsclassobjfile/cure";
 
 const DiseaseDetection = () => {
   const [file, setFile] = useState(null);
@@ -24,14 +25,10 @@ const DiseaseDetection = () => {
     try {
       setLoading(true);
 
-      console.log("Sending request to:", `${BACKEND2_BASE_URL}/predict`);
-
       const res = await fetch(`${BACKEND2_BASE_URL}/predict`, {
         method: "POST",
         body: formData,
       });
-
-      console.log("Response status:", res.status);
 
       if (!res.ok) {
         throw new Error("Server error: " + res.status);
@@ -53,6 +50,21 @@ const DiseaseDetection = () => {
       setLoading(false);
     }
   };
+
+  
+  const formatDiseaseName = (name) => {
+    if (!name) return null;
+
+    return name
+      .trim()
+      .toLowerCase()
+      .replace(/\b\w/g, (char) => char.toUpperCase());
+  };
+
+  
+  const diseaseName = formatDiseaseName(result?.disease);
+  const cropName = result?.crop;
+  const diseaseInfo = diseaseName ? diseases[diseaseName] : null;
 
   return (
     <div style={{ textAlign: "center", marginTop: "50px" }}>
@@ -89,9 +101,38 @@ const DiseaseDetection = () => {
       {result && !result.error && (
         <div style={{ marginTop: "30px" }}>
           <h2>Result</h2>
-          
-          <p><strong>Disease:</strong> {result.disease}</p>
 
+          
+          <p><strong>🦠 Disease:</strong> {diseaseName}</p>
+
+          {diseaseInfo ? (
+            <div style={{ textAlign: "left", display: "inline-block", marginTop: "20px" }}>
+              
+              <h3>🛠 Cure Steps</h3>
+              <ul>
+                {diseaseInfo.cureSteps.map((step, index) => (
+                  <li key={index}>{step}</li>
+                ))}
+              </ul>
+
+              <h3>💊 Medicines</h3>
+              <ul>
+                {diseaseInfo.medicines.length > 0 ? (
+                  diseaseInfo.medicines.map((med, index) => (
+                    <li key={index}>{med}</li>
+                  ))
+                ) : (
+                  <li>No medicines required</li>
+                )}
+              </ul>
+
+              <h3>⏱ Recovery Time</h3>
+              <p>{diseaseInfo.recoveryTime}</p>
+
+            </div>
+          ) : (
+            <p>⚠️ No cure data available</p>
+          )}
         </div>
       )}
     </div>
