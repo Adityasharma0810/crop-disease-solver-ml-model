@@ -21,7 +21,7 @@ app.add_middleware(
 )
 
 # ✅ Load model once
-model = tf.keras.models.load_model("model.keras")
+model = tf.keras.models.load_model("model.h5")
 
 # ✅ Auto-detect input size from model
 _, IMG_HEIGHT, IMG_WIDTH, _ = model.input_shape
