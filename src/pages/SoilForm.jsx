@@ -10,9 +10,11 @@ const fields = [
   { key: "rainfall", label: "Rainfall", unit: "mm", min: 20, max: 299, step: 0.1, placeholder: "e.g. 200.0" },
 ];
 
+const numericFields = fields.map(f => f.key);
+
 export default function SoilForm() {
   const [formData, setFormData] = useState({
-    N: "", P: "", K: "", temperature: "", humidity: "", ph: "", rainfall: ""
+    N: "", P: "", K: "", temperature: "", humidity: "", ph: "", rainfall: "", location: ""
   });
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -28,18 +30,21 @@ export default function SoilForm() {
     setResult(null);
 
     try {
+      const payload = {};
+      for (const [k, v] of Object.entries(formData)) {
+        payload[k] = numericFields.includes(k) ? parseFloat(v) : v;
+      }
+
       const response = await fetch("https://crop-disease-solver-ml-model.onrender.com/predict", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(
-          Object.fromEntries(Object.entries(formData).map(([k, v]) => [k, parseFloat(v)]))
-        ),
+        body: JSON.stringify(payload),
       });
 
       if (!response.ok) throw new Error("Prediction failed");
       const data = await response.json();
       setResult(data);
-    } catch{
+    } catch {
       setError("Could not connect to backend. Is it running?");
     } finally {
       setLoading(false);
@@ -76,6 +81,25 @@ export default function SoilForm() {
             />
           </div>
         ))}
+
+        {/* Location field — full width, spans both columns */}
+        <div style={{ gridColumn: "1 / -1" }}>
+          <label style={{ display: "block", fontWeight: 500, marginBottom: 4 }}>
+            Location <span style={{ color: "#999", fontWeight: 400 }}>(city name)</span>
+          </label>
+          <input
+            type="text"
+            name="location"
+            value={formData.location}
+            onChange={handleChange}
+            placeholder="e.g. Pune, Mumbai, Delhi"
+            style={{
+              width: "100%", padding: "0.5rem 0.75rem",
+              border: "1px solid #ddd", borderRadius: 8,
+              fontSize: 15, boxSizing: "border-box"
+            }}
+          />
+        </div>
       </div>
 
       <button
@@ -106,11 +130,16 @@ export default function SoilForm() {
           <div style={{ fontSize: 14, color: "#555" }}>
             Confidence: <strong>{result.confidence}%</strong>
           </div>
+          {result.location && (
+            <div style={{ fontSize: 13, color: "#777", marginTop: 4 }}>
+              📍 {result.location}
+            </div>
+          )}
           <div style={{ marginTop: "0.75rem", fontSize: 14, color: "#444" }}>
             {result.message}
           </div>
         </div>
-      )}
+          )}
     </div>
   );
 }

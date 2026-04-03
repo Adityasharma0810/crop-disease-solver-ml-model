@@ -1,0 +1,285 @@
+CROP: RICE
+Season: Kharif (June-November)
+Soil: Clay or clay loam, pH 5.5-7.0
+NPK Requirements: Nitrogen 120kg/ha, Phosphorus 60kg/ha, Potassium 40kg/ha
+Irrigation: Requires flooded conditions, 1200-2000mm water
+Sowing: Transplant seedlings 25-30 days old, spacing 20x15cm
+Growth Duration: 110-150 days
+Pest Control: Watch for stem borer, brown planthopper, blast disease
+Fertilizer Schedule: Apply half N + full P + full K at transplanting, remaining N in two splits at tillering and panicle initiation
+Harvest: When 80% grains are golden yellow, moisture content around 20-25%
+Yield: 4-6 tonnes per hectare
+Special Notes: Maintain 5cm standing water during vegetative stage
+
+CROP: MAIZE
+Season: Kharif and Rabi
+Soil: Well-drained loamy soil, pH 6.0-7.5
+NPK Requirements: Nitrogen 120kg/ha, Phosphorus 60kg/ha, Potassium 40kg/ha
+Irrigation: Critical at knee-high, tasseling and grain filling stages
+Sowing: Seed rate 20kg/ha, spacing 60x20cm, depth 3-5cm
+Growth Duration: 90-120 days
+Pest Control: Fall armyworm, stem borer, turcicum leaf blight
+Fertilizer Schedule: One third N at sowing, one third at knee high, one third at tasseling, full P and K at sowing
+Harvest: When husks turn brown and dry, grain moisture 20-25%
+Yield: 5-8 tonnes per hectare
+Special Notes: Cannot tolerate waterlogging, ensure good drainage
+
+CROP: CHICKPEA
+Season: Rabi (October-March)
+Soil: Sandy loam to clay loam, pH 6.0-8.0, well drained
+NPK Requirements: Nitrogen 20kg/ha, Phosphorus 40kg/ha, Potassium 20kg/ha
+Irrigation: One irrigation at pre-flowering and pod filling stage
+Sowing: Seed rate 60-80kg/ha, spacing 30x10cm
+Growth Duration: 90-120 days
+Pest Control: Pod borer Helicoverpa is the major pest, wilt disease
+Fertilizer Schedule: Full dose at sowing, being legume needs less nitrogen
+Harvest: When 70% pods turn brown and leaves shed
+Yield: 1.5-2.5 tonnes per hectare
+Special Notes: Rhizobium inoculation of seeds increases yield by 15-20%
+
+CROP: KIDNEYBEANS
+Season: Kharif
+Soil: Well drained loam, pH 6.0-7.0
+NPK Requirements: Nitrogen 25kg/ha, Phosphorus 60kg/ha, Potassium 40kg/ha
+Irrigation: At flowering and pod development stage
+Sowing: Seed rate 80-100kg/ha, spacing 45x10cm
+Growth Duration: 90-120 days
+Pest Control: Aphids, bean fly, angular leaf spot, anthracnose
+Fertilizer Schedule: Apply full P and K at sowing, N in two splits
+Harvest: When pods turn yellowish and dry
+Yield: 1.5-2.0 tonnes per hectare
+Special Notes: Sensitive to frost, avoid waterlogging
+
+CROP: PIGEONPEAS
+Season: Kharif (June-October)
+Soil: Sandy loam to clay loam, pH 6.0-7.5
+NPK Requirements: Nitrogen 25kg/ha, Phosphorus 50kg/ha, Potassium 30kg/ha
+Irrigation: Drought tolerant but needs moisture at flowering
+Sowing: Seed rate 12-15kg/ha, spacing 60-75x30cm
+Growth Duration: 150-180 days
+Pest Control: Pod borer, pod fly, wilt and sterility mosaic disease
+Fertilizer Schedule: Full dose at sowing, being a legume fixes its own nitrogen
+Harvest: When 75% pods turn brown
+Yield: 1.0-1.5 tonnes per hectare
+Special Notes: Can be intercropped with sorghum or cotton
+
+CROP: MOTHBEANS
+Season: Kharif
+Soil: Sandy loam, pH 7.0-8.5, drought resistant crop
+NPK Requirements: Nitrogen 20kg/ha, Phosphorus 40kg/ha, Potassium 20kg/ha
+Irrigation: Very drought tolerant, minimal irrigation needed
+Sowing: Seed rate 8-10kg/ha, spacing 45x15cm
+Growth Duration: 60-90 days
+Pest Control: Whitefly, aphids, yellow mosaic virus
+Fertilizer Schedule: Full dose at sowing
+Harvest: Multiple pickings as pods mature at different times
+Yield: 0.5-1.0 tonnes per hectare
+Special Notes: Excellent crop for arid and semi-arid regions
+
+CROP: MUNGBEAN
+Season: Kharif and summer
+Soil: Sandy loam to loam, pH 6.2-7.2
+NPK Requirements: Nitrogen 25kg/ha, Phosphorus 50kg/ha, Potassium 40kg/ha
+Irrigation: At flowering and pod filling, sensitive to waterlogging
+Sowing: Seed rate 15-20kg/ha, spacing 30x10cm
+Growth Duration: 60-75 days
+Pest Control: Yellow mosaic virus through whitefly, pod borer
+Fertilizer Schedule: Full dose at sowing
+Harvest: 2-3 pickings when pods turn black
+Yield: 0.8-1.2 tonnes per hectare
+Special Notes: Short duration crop, good for crop rotation
+
+CROP: BLACKGRAM
+Season: Kharif and Rabi
+Soil: Loam to clay loam, pH 6.0-7.5
+NPK Requirements: Nitrogen 25kg/ha, Phosphorus 50kg/ha, Potassium 30kg/ha
+Irrigation: At branching, flowering, and pod filling stages
+Sowing: Seed rate 15-20kg/ha, spacing 30x10cm
+Growth Duration: 70-90 days
+Pest Control: Yellow mosaic virus, leaf curl, pod borer
+Fertilizer Schedule: Full dose basal application at sowing
+Harvest: 2-3 pickings, pods turn black when mature
+Yield: 0.8-1.2 tonnes per hectare
+Special Notes: Sensitive to frost and waterlogging
+
+CROP: LENTIL
+Season: Rabi (October-March)
+Soil: Sandy loam to clay loam, pH 6.0-8.0
+NPK Requirements: Nitrogen 20kg/ha, Phosphorus 40kg/ha, Potassium 20kg/ha
+Irrigation: One or two irrigations, at branching and pod filling
+Sowing: Seed rate 30-35kg/ha, spacing 25-30x5-10cm
+Growth Duration: 100-130 days
+Pest Control: Aphids, pod borer, wilt, rust disease
+Fertilizer Schedule: Full dose at sowing, Rhizobium inoculation recommended
+Harvest: When plants turn yellow and lower pods dry
+Yield: 1.0-1.5 tonnes per hectare
+Special Notes: Grows well in cool dry climate
+
+CROP: POMEGRANATE
+Season: Perennial fruit crop
+Soil: Well drained loamy soil, pH 5.5-7.0, tolerates slightly alkaline
+NPK Requirements: Nitrogen 625g/plant/year, Phosphorus 250g/plant/year, Potassium 250g/plant/year
+Irrigation: Drip irrigation preferred, 8-10 liters per plant per day
+Sowing: Propagated through cuttings, spacing 5x4m or 4x3m for high density
+Growth Duration: Starts bearing in 2-3 years, economic life 25-30 years
+Pest Control: Anar butterfly, bark eating caterpillar, bacterial blight
+Fertilizer Schedule: Split into 3 doses, before flowering, after fruit set, and before harvest
+Harvest: Fruits ready 5-7 months after flowering, metallic sound on tapping indicates maturity
+Yield: 20-25 tonnes per hectare
+Special Notes: Withhold irrigation for 1-2 months to induce flowering
+
+CROP: BANANA
+Season: Perennial, planted year round
+Soil: Rich loamy well drained soil, pH 6.0-7.5
+NPK Requirements: Nitrogen 200g/plant, Phosphorus 60g/plant, Potassium 300g/plant
+Irrigation: Every 3-4 days, drip irrigation most efficient
+Sowing: Planted from suckers or tissue culture plants, spacing 2x2m or 1.8x1.8m
+Growth Duration: 11-15 months from planting to harvest
+Pest Control: Banana weevil, nematodes, Fusarium wilt, Sigatoka leaf spot
+Fertilizer Schedule: Every 2 months in 6 equal splits
+Harvest: Harvest when fingers are full and rounded, 75-80% maturity for distant markets
+Yield: 30-40 tonnes per hectare
+Special Notes: Support plants with stakes before bunch emergence
+
+CROP: MANGO
+Season: Perennial, flowers January-March, harvest May-July
+Soil: Deep well drained alluvial or loamy soil, pH 5.5-7.5
+NPK Requirements: Nitrogen 500g/tree/year for mature tree, increases with age
+Irrigation: Critical at flowering and fruit development, avoid during flowering
+Sowing: Grafted plants preferred, spacing 10x10m standard or 5x5m for high density
+Growth Duration: Grafted trees bear in 3-5 years
+Pest Control: Mango hopper, fruit fly, powdery mildew, anthracnose
+Fertilizer Schedule: Once before monsoon and once after harvest
+Harvest: When fruit skin changes color and floats in water when mature
+Yield: 10-15 tonnes per hectare for mature orchard
+Special Notes: Biennial bearing is common, manage with proper pruning
+
+CROP: GRAPES
+Season: Perennial, pruned twice a year in most regions
+Soil: Well drained sandy loam to loam, pH 6.5-7.5
+NPK Requirements: Nitrogen 45kg/ha, Phosphorus 45kg/ha, Potassium 45kg/ha per year
+Irrigation: Drip irrigation, withhold 4-6 weeks before harvest for sugar accumulation
+Sowing: Planted from cuttings, spacing 3x1.5m or 2.7x0.9m
+Growth Duration: Productive from 3rd year, economic life 25-30 years
+Pest Control: Downy mildew, powdery mildew, thrips, mealybug
+Fertilizer Schedule: Split into pre-pruning, post-pruning, berry formation stages
+Harvest: Grape clusters when sugar content reaches 20-22 brix
+Yield: 20-30 tonnes per hectare
+Special Notes: Training on bower or trellis system essential
+
+CROP: WATERMELON
+Season: Summer (February-May)
+Soil: Sandy loam, well drained, pH 6.0-7.0
+NPK Requirements: Nitrogen 100kg/ha, Phosphorus 50kg/ha, Potassium 50kg/ha
+Irrigation: Every 7-10 days, reduce near harvest for sweetness
+Sowing: Seed rate 2-3kg/ha, spacing 3x1m in pits
+Growth Duration: 70-90 days
+Pest Control: Fruit fly, red pumpkin beetle, downy mildew, mosaic virus
+Fertilizer Schedule: Half N + full P + K at sowing, remaining N at vine development
+Harvest: Dull thud sound on tapping, dried tendril near fruit indicates maturity
+Yield: 25-35 tonnes per hectare
+Special Notes: Mulching reduces weed growth and conserves moisture
+
+CROP: MUSKMELON
+Season: Summer (February-May)
+Soil: Sandy loam, well drained, pH 6.0-7.0
+NPK Requirements: Nitrogen 80kg/ha, Phosphorus 40kg/ha, Potassium 60kg/ha
+Irrigation: Regular but reduce 2 weeks before harvest for sugar concentration
+Sowing: Seed rate 1.5-2kg/ha, spacing 2x1m
+Growth Duration: 70-90 days
+Pest Control: Aphids, red spider mite, powdery mildew, downy mildew
+Fertilizer Schedule: Full P and K at planting, N in three splits
+Harvest: Fruit slips easily from vine with slight pressure when ripe
+Yield: 15-20 tonnes per hectare
+Special Notes: Hand pollination increases fruit set in controlled environments
+
+CROP: APPLE
+Season: Perennial, flowers March-April, harvest August-October
+Soil: Well drained loamy soil, pH 5.5-6.5, needs chilling requirement
+NPK Requirements: Nitrogen 70g/tree young increasing to 700g mature
+Irrigation: Critical at pink bud, petal fall, and fruit development
+Sowing: Grafted plants on rootstock, spacing 6x6m standard or 3x1.5m high density
+Growth Duration: Grafted trees bear in 3-5 years
+Pest Control: Codling moth, wooly aphid, scab, fire blight
+Fertilizer Schedule: Before bud break in spring, after harvest in fall
+Harvest: 140-150 days after full bloom, starch iodine test confirms maturity
+Yield: 10-20 tonnes per hectare depending on variety and age
+Special Notes: Requires 1000-1600 chilling hours below 7 degrees Celsius
+
+CROP: ORANGE
+Season: Perennial, harvest November-March
+Soil: Deep well drained sandy loam to loam, pH 6.0-7.5
+NPK Requirements: Nitrogen 500g/tree/year, Phosphorus 250g/tree/year, Potassium 500g/tree/year
+Irrigation: Drip preferred, critical at flowering and fruit development
+Sowing: Budded plants on rootstock, spacing 6x6m
+Growth Duration: Grafted trees bear in 3-4 years
+Pest Control: Citrus psylla, leaf miner, tristeza virus, citrus canker
+Fertilizer Schedule: Three splits, before new flush, after flowering, before harvest
+Harvest: Fruits turn orange and TSS reaches 10-12 brix
+Yield: 15-20 tonnes per hectare
+Special Notes: Zinc and micronutrient sprays important for fruit quality
+
+CROP: PAPAYA
+Season: Planted year round, bears within 10-12 months
+Soil: Well drained sandy loam, pH 6.0-7.0, cannot tolerate waterlogging
+NPK Requirements: Nitrogen 200g/plant/year, Phosphorus 200g/plant/year, Potassium 250g/plant/year
+Irrigation: Every 7-10 days, avoid wetting crown and stem
+Sowing: Raised nursery beds, transplant at 45 days, spacing 2x2m
+Growth Duration: First harvest 9-12 months after transplanting
+Pest Control: Papaya mealybug, papaya ringspot virus through aphids
+Fertilizer Schedule: Every 2 months in equal splits
+Harvest: When fruit shows yellow streaks, for papain extraction harvest green
+Yield: 40-50 tonnes per hectare per year
+Special Notes: Plant 10% male plants to ensure pollination
+
+CROP: COCONUT
+Season: Perennial, year round production
+Soil: Sandy loam to red laterite, pH 5.2-8.0, tolerates salinity
+NPK Requirements: Nitrogen 500g/palm/year, Phosphorus 320g/palm/year, Potassium 1200g/palm/year
+Irrigation: 40-45 liters per palm every alternate day in summer
+Sowing: Seed nuts planted in pits, spacing 7.5x7.5m triangular
+Growth Duration: Starts bearing in 6-8 years, economic life 60-80 years
+Pest Control: Rhinoceros beetle, red palm weevil, coconut mite, root wilt disease
+Fertilizer Schedule: Two equal splits, May-June and September-October
+Harvest: Nuts harvested every 45 days, at 12 months maturity for copra
+Yield: 80-100 nuts per palm per year
+Special Notes: Potassium is the most critical nutrient for coconut
+
+CROP: COTTON
+Season: Kharif (May-June to November-December)
+Soil: Black cotton soil or deep alluvial, pH 7.0-8.0
+NPK Requirements: Nitrogen 120kg/ha, Phosphorus 60kg/ha, Potassium 60kg/ha
+Irrigation: At square formation, flowering, and boll development
+Sowing: Seed rate 2.5kg/ha for Bt cotton, spacing 90x60cm
+Growth Duration: 160-180 days
+Pest Control: Bollworm, whitefly, aphids, bacterial blight
+Fertilizer Schedule: One third N at sowing, one third at 45 days, one third at 75 days
+Harvest: Pick bolls when fully open, 4-5 pickings over the season
+Yield: 2-3 tonnes of seed cotton per hectare
+Special Notes: Bt cotton has resistance to bollworm but whitefly management still needed
+
+CROP: JUTE
+Season: Kharif (March-July)
+Soil: Well drained sandy loam to clay loam, pH 6.0-7.5
+NPK Requirements: Nitrogen 60kg/ha, Phosphorus 30kg/ha, Potassium 30kg/ha
+Irrigation: Requires good rainfall, 1000-2000mm, supplemental at early stage
+Sowing: Seed rate 7-8kg/ha, broadcast sowing, thin to 4-6cm spacing
+Growth Duration: 100-120 days
+Pest Control: Jute hairy caterpillar, stem rot, soft rot disease
+Fertilizer Schedule: Half N at sowing, remaining at 30 days after sowing
+Harvest: At 50% flowering stage for best fibre quality
+Yield: 2.0-2.5 tonnes of dry fibre per hectare
+Special Notes: Ret in clean water for 10-15 days for fibre extraction
+
+CROP: COFFEE
+Season: Perennial, flowers after dry spell, harvest November-February
+Soil: Well drained deep loam to clay loam, pH 6.0-6.5, shade loving
+NPK Requirements: Nitrogen 40g/plant increasing to 200g mature, similar P and K
+Irrigation: Sprinkler irrigation, critical at flowering and bean development
+Sowing: Grown from seeds in nursery, transplanted at 6-9 months, spacing 3x3m
+Growth Duration: Starts bearing in 3-4 years
+Pest Control: White stem borer, shot hole borer, leaf rust, black rot
+Fertilizer Schedule: Three splits, pre-monsoon, mid-monsoon, post-monsoon
+Harvest: Hand pick only red ripe cherries, selective picking improves quality
+Yield: 700-900kg of clean coffee per hectare
+Special Notes: Shade trees like silver oak are essential for quality coffee
