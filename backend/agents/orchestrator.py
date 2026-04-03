@@ -1,6 +1,8 @@
 import os
+import json
 from datetime import date
-from groq import Groq
+from langchain_groq import ChatGroq
+from langchain_core.messages import HumanMessage
 from dotenv import load_dotenv
 
 from agents.weather_agent import get_forecast
@@ -8,20 +10,17 @@ from agents.crop_advisory import get_crop_advisory
 
 load_dotenv()
 
-client = Groq(api_key=os.getenv("GROQ_API_KEY"))
-
 
 def run_orchestrator(crop_name: str, city: str, soil_data: dict) -> dict:
     """
     Main orchestrator function.
     Called by /predict endpoint after ML model returns crop name.
-    
     Returns a structured dict ready for frontend dashboard consumption.
     """
 
-    today = date.today().isoformat()  
+    today = date.today().isoformat()
 
-    
+    # --- Step 1: Run both agents ---
     print(f"[Orchestrator] Fetching weather for {city}...")
     weather_data = get_forecast(city)
 
@@ -35,7 +34,7 @@ def run_orchestrator(crop_name: str, city: str, soil_data: dict) -> dict:
         )
     )
 
-  
+    # --- Step 2: Build prompt for Groq ---
     weather_context = weather_data["summary"] if weather_data["success"] else (
         f"Weather data unavailable for {city}. "
         f"Provide general advice based on crop requirements."
@@ -55,7 +54,7 @@ The recommended crop based on soil analysis is: {crop_name.upper()}
 
 --- SOIL DATA ---
 Nitrogen: {soil_data['N']} mg/kg
-Phosphorus: {soil_data['P']} mg/kg  
+Phosphorus: {soil_data['P']} mg/kg
 Potassium: {soil_data['K']} mg/kg
 Temperature: {soil_data['temperature']}°C
 Humidity: {soil_data['humidity']}%
@@ -132,29 +131,29 @@ Fill the timeline with enough weeks to cover the full crop cycle.
 All dates must be real calendar dates starting from today ({today}).
 """
 
-
+    # --- Step 3: Call Groq via LangChain ---
     print(f"[Orchestrator] Calling Groq for full farming plan...")
     try:
-        response = client.chat.completions.create(
+        llm = ChatGroq(
             model="llama-3.1-8b-instant",
-            messages=[{"role": "user", "content": prompt}],
-            temperature=0.2,     
+            api_key=os.getenv("GROQ_API_KEY"),
+            temperature=0.2,
             max_tokens=3000
         )
 
-        raw_response = response.choices[0].message.content.strip()
+        response = llm.invoke([HumanMessage(content=prompt)])
+        raw_response = response.content.strip()
 
-       
+        # Strip markdown fences if model adds them despite instructions
         if raw_response.startswith("```"):
             raw_response = raw_response.split("```")[1]
             if raw_response.startswith("json"):
                 raw_response = raw_response[4:]
             raw_response = raw_response.strip()
 
-        import json
         plan = json.loads(raw_response)
 
-      
+        # Attach raw forecast for dashboard charts
         plan["forecast_raw"] = weather_data.get("forecast", [])
         plan["weather_success"] = weather_data["success"]
 
@@ -168,5 +167,5 @@ All dates must be real calendar dates starting from today ({today}).
         return {
             "success": False,
             "error": str(e),
-            "fallback_advisory": crop_knowledge 
+            "fallback_advisory": crop_knowledge
         }

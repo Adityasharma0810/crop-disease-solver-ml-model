@@ -14,4 +14,3 @@ chromadb
 sentence-transformers
 requests
 pypdf
-groq
