@@ -48,7 +48,10 @@ def build_vector_db():
     return db
 
 def get_retriever():
-    embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+    embeddings = HuggingFaceInferenceAPIEmbeddings(
+        api_key=os.getenv("HUGGINGFACE_API_KEY"),
+        model_name="sentence-transformers/all-MiniLM-L6-v2"
+    )
     if not os.path.exists(CHROMA_PATH):
         build_vector_db()
     db = Chroma(

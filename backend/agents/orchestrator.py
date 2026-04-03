@@ -20,7 +20,7 @@ def run_orchestrator(crop_name: str, city: str, soil_data: dict) -> dict:
 
     today = date.today().isoformat()
 
-    # --- Step 1: Run both agents ---
+    
     print(f"[Orchestrator] Fetching weather for {city}...")
     weather_data = get_forecast(city)
 
@@ -34,7 +34,7 @@ def run_orchestrator(crop_name: str, city: str, soil_data: dict) -> dict:
         )
     )
 
-    # --- Step 2: Build prompt for Groq ---
+  
     weather_context = weather_data["summary"] if weather_data["success"] else (
         f"Weather data unavailable for {city}. "
         f"Provide general advice based on crop requirements."
@@ -131,7 +131,7 @@ Fill the timeline with enough weeks to cover the full crop cycle.
 All dates must be real calendar dates starting from today ({today}).
 """
 
-    # --- Step 3: Call Groq via LangChain ---
+
     print(f"[Orchestrator] Calling Groq for full farming plan...")
     try:
         llm = ChatGroq(
@@ -144,7 +144,7 @@ All dates must be real calendar dates starting from today ({today}).
         response = llm.invoke([HumanMessage(content=prompt)])
         raw_response = response.content.strip()
 
-        # Strip markdown fences if model adds them despite instructions
+   
         if raw_response.startswith("```"):
             raw_response = raw_response.split("```")[1]
             if raw_response.startswith("json"):
@@ -153,7 +153,7 @@ All dates must be real calendar dates starting from today ({today}).
 
         plan = json.loads(raw_response)
 
-        # Attach raw forecast for dashboard charts
+        
         plan["forecast_raw"] = weather_data.get("forecast", [])
         plan["weather_success"] = weather_data["success"]
 
