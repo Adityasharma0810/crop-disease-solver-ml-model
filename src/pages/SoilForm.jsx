@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { usePlan } from "./context/PlanContext";
 
 const fields = [
   { key: "N", label: "Nitrogen (N)", unit: "mg/kg", min: 0, max: 140, step: 1, placeholder: "e.g. 90" },
@@ -19,6 +21,9 @@ export default function SoilForm() {
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+
+  const { setPlan } = usePlan();
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -44,6 +49,12 @@ export default function SoilForm() {
       if (!response.ok) throw new Error("Prediction failed");
       const data = await response.json();
       setResult(data);
+
+      // Store full plan in context for Dashboard
+      if (data.plan) {
+        setPlan(data.plan);
+      }
+
     } catch {
       setError("Could not connect to backend. Is it running?");
     } finally {
@@ -82,7 +93,6 @@ export default function SoilForm() {
           </div>
         ))}
 
-        {/* Location field — full width, spans both columns */}
         <div style={{ gridColumn: "1 / -1" }}>
           <label style={{ display: "block", fontWeight: 500, marginBottom: 4 }}>
             Location <span style={{ color: "#999", fontWeight: 400 }}>(city name)</span>
@@ -138,8 +148,22 @@ export default function SoilForm() {
           <div style={{ marginTop: "0.75rem", fontSize: 14, color: "#444" }}>
             {result.message}
           </div>
-        </div>
+
+          {result.plan && (
+            <button
+              onClick={() => navigate("/")}
+              style={{
+                marginTop: "1rem", width: "100%", padding: "0.75rem",
+                background: "#1a5c28", color: "#fff", border: "none",
+                borderRadius: 8, fontSize: 15, fontWeight: 600,
+                cursor: "pointer"
+              }}
+            >
+              View Full Dashboard →
+            </button>
           )}
+        </div>
+      )}
     </div>
   );
 }

@@ -5,20 +5,23 @@ import DiseaseDetection from "./pages/DiseaseDetection";
 import CropInsights from "./pages/CropInsights";
 import SmartMarketplace from "./pages/SmartMarketplace";
 import SoilForm from "./pages/SoilForm";
+import { PlanProvider } from "/context/PlanContext";
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<MainLayout />}>
-          <Route index element={<Dashboard />} />
-          <Route path="disease-detection" element={<DiseaseDetection />} />
-          <Route path="crop-insights" element={<CropInsights />} />
-          <Route path="smart-marketplace" element={<SmartMarketplace />} />
-          <Route path="soil-form" element={<SoilForm />} />
-        </Route>
-      </Routes>
-    </Router>
+    <PlanProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<MainLayout />}>
+            <Route index element={<Dashboard />} />
+            <Route path="disease-detection" element={<DiseaseDetection />} />
+            <Route path="crop-insights" element={<CropInsights />} />
+            <Route path="smart-marketplace" element={<SmartMarketplace />} />
+            <Route path="soil-form" element={<SoilForm />} />
+          </Route>
+        </Routes>
+      </Router>
+    </PlanProvider>
   );
 }
 
