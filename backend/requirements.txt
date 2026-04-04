@@ -8,6 +8,7 @@ langchain
 langchain-core
 langchain-community
 langchain-text-splitters
+langhchain-huggingface
 langchain-groq
 chromadb
 requests
