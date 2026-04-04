@@ -11,6 +11,6 @@ export function PlanProvider({ children }) {
   );
 }
 
-export function usePlan() {
+export function usePlan(){
   return useContext(PlanContext);
 }

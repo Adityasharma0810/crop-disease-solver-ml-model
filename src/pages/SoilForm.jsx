@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { usePlan } from "./context/PlanContext";
+import { usePlan } from "../context/PlanContext";
 
 const fields = [
   { key: "N", label: "Nitrogen (N)", unit: "mg/kg", min: 0, max: 140, step: 1, placeholder: "e.g. 90" },

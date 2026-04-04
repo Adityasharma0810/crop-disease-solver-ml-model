@@ -5,7 +5,7 @@ import DiseaseDetection from "./pages/DiseaseDetection";
 import CropInsights from "./pages/CropInsights";
 import SmartMarketplace from "./pages/SmartMarketplace";
 import SoilForm from "./pages/SoilForm";
-import { PlanProvider } from "/context/PlanContext";
+import { PlanProvider } from "./context/PlanContext";
 
 function App() {
   return (
